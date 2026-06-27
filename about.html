@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Обо мне</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: Arial;
+            padding: 40px;
+        }
+        h1 { color: gold; }
+        h2 { color: orange; }
+        .card {
+            background: #16213e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background: gold;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Привет, я Беннеди!</h1>
+    
+    <div class="card">
+        <h2>О себе</h2>
+        <p>Мне 19 лет, живу в Москва</p>
+        <p>Учу программирование с нуля, я надеюсь что я смогу сделать быстро и буду хорошим специалистом в этой сфере!</p>
+    </div>
+
+    <div class="card">
+        <h2>Мои интересы</h2>
+        <p>— музыка</p>
+        <p>— инвестиции</p>
+        <p>— бизнес</p>
+        <p>- программирование</p>
+        <p>- суетить</p>
+    </div>
+
+    <div class="card">
+        <h2>Мои цели</h2>
+        <p> - выучить языки программирования</p>
+        <p> - заработать денег</p>
+    </div>
+<div id="secret" style="display: none;">
+
+    <p>Это скрытый текст!</p>
+</div>
+<button onclick="showSecret()">Показать секрет</button>
+
+<div class="card">
+    <h2>Как тебя зовут?</h2>
+    <input id="nameInput" type="text" placeholder="Введи имя...">
+    <button onclick="greetUser()">Поприветствовать</button>
+    <p id="greeting"></p>
+</div>
+
+<script>
+    function showSecret() {
+        document.getElementById('secret').style.display = 'block';
+    }
+    function greetUser() {
+        let name = document.getElementById('nameInput').value;
+        document.getElementById('greeting').innerText = 'Привет, ' + name + '!';
+    }
+</script>
+</body>
+</html>
